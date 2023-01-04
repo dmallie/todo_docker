@@ -1,0 +1,96 @@
+/* create_event and edit_event shares style from this file */
+/* The canvas and header section is styled in todo_calendar.css */
+:root {
+       --color-red: #f0725c;
+       --color-black: #000;
+       --color-container-black: #292929;
+       --color-green: #71b77e;
+       --color-yellow: #f2cd5f;
+       --color-blue: #6ea2dd;
+       --color-orange: #f29940;
+       --color-light-grey: #f5f5f5;
+       --color-mid-grey: #b5b6ba;
+       --color-light-blue: #73c3ce;
+       --color-grey: #828282;
+       --color-dark-grey: #333;
+       --color-banner-white: #e8e8e8;
+       --column-gap: 16px;
+       --side-gap: 16px;
+       --vertical-gap: 20px;
+       --max-content-width: 1440px;
+}
+/* This container contains the list of events */
+/* here we set the dimension and position of the container */
+.container_editEvent{
+       padding: 1.5rem;
+       background: var(--color-container-black);
+       color: var(--color-mid-grey);
+       border: solid 1px var(--color-red);
+       border-radius: 10px;
+}
+.title{
+       color: var(--color-light-grey);
+       text-transform: capitalize;
+       padding-bottom: var(--vertical-gap);
+}
+/* determines how to arrange the two dropdown items */
+.time_field_container{
+       padding-bottom: var(--vertical-gap);
+       width: 50%;
+       display: flex;
+       justify-content: space-between;
+}
+/* styles the dropdown items */
+.time_field{
+       background: var(--color-container-black);
+       color: inherit;
+       font-family: inherit;
+       font-size: 1.2rem;
+       text-transform: capitalize;
+       border: 1px solid var(--color-red);
+       border-radius: 5px;
+       padding: 0.5rem 1rem;
+}
+/* styles the title inputfield */
+.input_field{
+       background: var(--color-container-black);
+       border: solid 1px var(--color-red);
+       border-radius: 5px;
+       color: inherit;
+       font-size: 1.2rem;
+       padding: 0.5rem 1rem;
+       width: 275px;
+}
+/* styles the two labels Event Title and Event Description */
+label{
+       font-family: inherit;
+       font-size: 1.2rem;
+       text-transform: capitalize;
+       padding-right: var(--side-gap);
+}
+/* Styles the richtext editor field */
+.text_area{
+       background-color: var(--color-container-black);
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	border: 1px solid var(--color-goal-red);
+	border-radius: 5px;
+	width: 550px;
+   
+}
+/* style the submit button */
+.btn{
+       background-color: var(--color-container-black);
+	color: inherit;
+	font-family: inherit;
+	font-size: 1.2rem;
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-red);
+	border-radius: 5px;
+}
+.btn:hover{
+       background: inherit;
+       color: inherit;
+
+}

@@ -1,0 +1,200 @@
+﻿:root {
+       --color-red: #f0725c;
+       --color-black: #000;
+       --color-container-black: #292929;
+       --color-green: #71b77e;
+       --color-yellow: #f2cd5f;
+       --color-blue: #6ea2dd;
+       --color-orange: #f29940;
+       --color-light-grey: #f5f5f5;
+       --color-mid-grey: #b5b6ba;
+       --color-light-blue: #73c3ce;
+       --color-grey: #828282;
+       --color-dark-grey: #333;
+       --color-banner-white: #e8e8e8;
+       --column-gap: 16px;
+       --side-gap: 16px;
+       --vertical-gap: 8px;
+       --max-content-width: 1440px;
+   }
+.canvas{
+       color: var(--color-light-grey);
+       display: flex;
+       flex-direction: column;
+}
+.header{
+       position: fixed;
+       height: 80px;
+       width: 100%;
+       background: var(--color-orange);
+       color: var(--color-light-grey);
+       font-weight: 700;
+       font-size: 2rem;
+}
+.header a{
+       color: var(--color-light-grey);
+}
+.header a:hover{
+       color: var(--color-light-grey);
+       text-decoration: none;
+}
+.header .header__nav{
+       margin-top :0.5rem;
+       margin-left: 1.5rem;
+       padding-right: 3rem;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+}
+.header__left-content{
+       justify-content: left;
+}
+.header__right-content{
+       margin-right: 2rem;
+       justify-content: right;
+}
+.header__icon{
+       border-radius: 50%;
+}
+.header__list{
+       list-style: none;
+       display: flex;
+       /* margin-top: 1.0rem; */
+       margin-bottom: 1rem;
+       padding-right: 1rem;
+}
+.header__list li{
+       padding-left: 1rem;
+}
+/****************************************************************
+*********** CALENDAR BODY ***************************************/
+/* sets the position o the container */
+.cal__main{
+       position: absolute;
+       top: 45%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+}
+/* sets the font property for the title */
+.cal__main h1{
+       font-size: 3rem;
+       color: var(--color-mid-grey);
+       margin-bottom: 20px;
+       text-align: center;
+       text-transform: uppercase;
+}
+/* sets the size of the container*/
+.cal__container{
+     width: 700px;
+     height: 470px;  
+}
+/* styles the header section of teh calendar */
+.calendar__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background:   var(--color-mid-grey);
+    backdrop-filter: blur(150px);
+    border-radius: 20px 20px 0 0; 
+}
+/* styles the arrows which takes the calendar to previous or next month */
+.arrow a{
+       font-size: 3rem;
+       padding: 1rem;
+       cursor: pointer;
+       width: 50px;
+       height: 50px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       color: var(--color-banner-white);
+}
+.arrow a:hover, .arrow:active, .arrow:focus, .arrow:link{
+       text-decoration: none;
+       background: var(--color-grey);
+       border-radius: 50%;
+}
+/* styles the header which displays today's date */
+.calendar__day{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding-right: 15rem;
+       overflow: hidden;
+}
+.cal__month{
+       font-size: 1.8rem;
+       text-transform: uppercase;
+       color: var(--color-banner-white);
+}
+/* To style the time */
+.cal__time{
+       font-size: 1.8rem;
+       color: var(--color-banner-white);
+}
+/* sets the size, background and border radius of the bottom half */
+.calendar__bottom{
+       height: 50px;
+       background: var(--color-dark-grey);
+       backdrop-filter: blur(50px); 
+       width: 100%;
+       height:80%;
+       border-radius: 0 0 20px 20px;
+}
+/* divides the width to the number of weekdays */
+.calendar__bottom .calendar__weekdays{
+       display: grid;
+       grid-template-columns: repeat(7, 1fr); /* divide the width to seven equal parts */
+       place-items: center;
+       
+}
+/* we set the font style, size padding etc */
+.calendar__weekdays span{
+       font-family: inherit;
+       font-size: 1.5rem;
+       padding: 1rem;
+       text-align: center;
+       border-radius: 15px;
+       cursor: pointer;
+       transition: all 200ms;
+       width: 100%;
+}
+.calendar__weekdays span:hover{
+       background-color: var(--color-light-grey);
+       color: var(--color-dark-grey);
+}
+/*  */
+.calendar__days{
+       display: grid;
+       grid-template-columns: repeat(7, 1fr);
+       place-items: center;
+}
+.calendar__days span{
+       font-family: inherit;
+       font-size: 1.5rem;
+       padding: 1rem;
+       width: 100%;
+       text-align: center;
+       border-radius: 15px;
+       cursor: pointer;
+       transition: all 200ms;
+}
+.calendar__days span:hover, a:hover{
+       background-color: var(--color-grey);
+       color: var(--color-dark-grey);
+       text-decoration: none;
+}
+.calendar__days a{
+       color: var(--color-light-grey);
+       text-decoration: none;
+}
+.calendar__days a:hover, a:focus{
+       text-decoration: none;
+}
+.today{
+       background-color: var(--color-grey);
+       color: var(--color-light-grey);
+       width: 100%;
+       border-radius: 15px;
+}

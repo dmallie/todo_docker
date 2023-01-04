@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+        <div class="container my_profile_container">
+              <div class="profile">
+                     <div class="profile-image">
+                            {% if user.profile_pic %}
+                                   <img src={{ user.profile_pic.url }} alt="" 
+                                          style="max-width:150px; max-height:150px">
+                            {% else %}
+                                   <img src="{% static 'svg/user-solid.svg' %}" alt="" 
+                                          style="max-width:150px; max-height:150px">
+                            {% endif %}              
+                     </div>
+              </div>
+              <div class="stats">
+                     <div>
+                            <h1>{{ user.username }}</h1>
+                            <ul class="unorder_list">
+                                   <li class="completed">{{ status.completed }}&nbsp; Completed</li>
+                                   <li class="on-going">{{ status.goingon }}&nbsp; On going</li>
+                                   <li class="up-coming">{{ status.upcoming }}&nbsp; Upcoming</li>
+                            </ul>
+                     </div>
+                     <div class="stat-summary">
+                           <p>Total of <strong>&nbsp;{{ status.total_schedules }}</strong> schedules.</p>
+
+                     </div>
+                     <form action="{% url 'accounts:my_profile' %}" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="profile_edit">
+                                   <input  type="file" name="edit_profile" />
+                                   <button type="submit" class="btn_submit">Change profile picture</button>
+                            </div>
+                     </form>
+                     <div class="to_calendar">
+                            <a href="{% url 'todo_list:index' %}" class="btn_submit btn_calendar">To calendar</a>
+
+                     </div>
+              </div>
+        </div>
+{% endblock %}

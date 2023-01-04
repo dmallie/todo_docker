@@ -1,0 +1,51 @@
+/* The canvas and header section is styled in todo_calendar.css */
+:root {
+       --color-red: #f0725c;
+       --color-black: #000;
+       --color-container-black: #292929;
+       --color-green: #71b77e;
+       --color-yellow: #f2cd5f;
+       --color-blue: #6ea2dd;
+       --color-orange: #f29940;
+       --color-light-grey: #f5f5f5;
+       --color-mid-grey: #b5b6ba;
+       --color-light-blue: #73c3ce;
+       --color-grey: #828282;
+       --color-dark-grey: #333;
+       --color-banner-white: #e8e8e8;
+       --column-gap: 16px;
+       --side-gap: 16px;
+       --vertical-gap: 20px;
+       --max-content-width: 1440px;
+}
+/* This container contains the list of events */
+/* here we set the dimension, background color and border of the container */
+.container_details{
+       width: 50%;
+       margin: 10% auto;
+       padding: 1.5rem;
+       background: var(--color-container-black);
+       color: var(--color-mid-grey);
+       border: solid 1px var(--color-red);
+       border-radius: 10px;
+}
+/* defines font size, text-transform */
+.one_block .title_{
+       font-size: 1.2rem;
+       text-transform: capitalize;
+}
+.details_footer{
+       border-bottom: solid 1px var(--color-goal-light-grey);
+       margin: 1rem;
+}
+.details_footer .footer__list{
+       display: flex;
+       justify-content: space-between;
+       list-style: none;
+       padding-left: 1rem;
+}
+/* DELETE PAGE BUTTON ORGANIZER */
+.btn_row{
+       display: flex;
+       gap: 40%;
+}
